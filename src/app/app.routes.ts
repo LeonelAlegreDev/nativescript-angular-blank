@@ -1,9 +1,12 @@
 import { Routes } from '@angular/router';
-import { ItemsComponent } from './item/items.component';
-import { ItemDetailComponent } from './item/item-detail.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/items', pathMatch: 'full' },
-  { path: 'items', component: ItemsComponent },
-  { path: 'item/:id', component: ItemDetailComponent },
+    // Update this 👇
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+
+    // Add this 👇
+    {
+        path: 'home',
+        loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule)
+    }
 ];
