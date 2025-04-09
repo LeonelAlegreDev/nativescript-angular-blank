@@ -4,7 +4,11 @@ import { HomeRoutingModule } from './home-routing.module'
 import { HomeComponent } from './home.component'
 
 @NgModule({
-  imports: [NativeScriptCommonModule, HomeRoutingModule, HomeComponent],
+  imports: [
+    NativeScriptCommonModule,
+    HomeRoutingModule,
+    HomeComponent
+  ],
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class HomeModule {}

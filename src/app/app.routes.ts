@@ -1,12 +1,14 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-    // Update this 👇
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '', redirectTo: '/auth', pathMatch: 'full' },
 
-    // Add this 👇
     {
         path: 'home',
-        loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule)
+        loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule),
+    },
+    {
+        path: 'auth',
+        loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule),
     }
 ];

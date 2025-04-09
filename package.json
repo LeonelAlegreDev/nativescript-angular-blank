@@ -20,6 +20,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.5",
     "@angular/compiler-cli": "~19.0.0",
+    "@nativescript/android": "8.9.1",
     "@nativescript/preview-cli": "1.0.14",
     "@nativescript/tailwind": "^2.1.0",
     "@nativescript/types": "~8.9.0",
