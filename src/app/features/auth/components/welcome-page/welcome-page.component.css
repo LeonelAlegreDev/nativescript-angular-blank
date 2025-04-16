@@ -1,11 +1,6 @@
 .page {
     padding: 20;
-    background-color: var(--primary-color);
-    color: var(--text-color-dark);
-
 }
-
-
 .h1 {
     font-size: 30px;
     margin: 30;

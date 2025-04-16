@@ -1,21 +1,16 @@
-<!-- <AbsoluteLayout>
-    <ns-notification-popup #notificationPopup></ns-notification-popup>
-</AbsoluteLayout> -->
+<GridLayout class="page">
+  <!-- CONTENT -->
+  <GridLayout class="content">
+    <StackLayout>
+      <!-- PAGE CONTENT -->
+      <Image class="ns-image" height="200" width="200" src="~/assets/icons/icon.png"></Image>
 
-<ActionBar title="Welcome page"></ActionBar>
+      <Label text="¡Bienvenido!" class="h1 text-center"></Label>
   
-<StackLayout class="page" verticalAlignment="middle" height="100%">
-    <!-- <ns-notification-popup #notificationPopup></ns-notification-popup> -->
-    <!-- REVISAR COMPONENTE DE NOTIFICACION -->
-    <AbsoluteLayout>
-        <ns-notification-popup #notificationPopup></ns-notification-popup>
-    </AbsoluteLayout>
+      <Button text="Crear Cuenta" class="btn btn-primary" (tap)="onCreateAccountTap()"></Button>
+      <Button text="Iniciar Sesión" class="btn btn-secondary" (tap)="onLoginTap()"></Button>
+    </StackLayout>
+  </GridLayout>
 
-    <Image class="ns-image" height="200" width="200" src="~/assets/icons/icon.png"></Image>
-
-    <Label text="¡Bienvenido!" class="h1 text-center"></Label>
-
-    <Button text="Crear Cuenta" class="btn btn-primary" (tap)="onCreateAccountTap()"></Button>
-    <Button text="Iniciar Sesión" class="btn btn-secondary" (tap)="onLoginTap()"></Button>
-</StackLayout>
-
+  <AbsoluteLayout #notificationPopup class="notifications"></AbsoluteLayout>
+</GridLayout>

@@ -1,28 +1,34 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NO_ERRORS_SCHEMA } from '@angular/core';
+import { Notification } from '~/app/core/models/Notification';
 
 @Component({
   selector: 'ns-notification-popup',
   templateUrl: './notification-popup.component.html',
   styleUrls: ['./notification-popup.component.css'],
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+  ],
+  schemas: [
+    NO_ERRORS_SCHEMA
+  ],
 })
 export class NotificationPopupComponent implements OnInit {
-  public message: string = '';
-  public isVisible: boolean = false;
+  public notifications: Notification[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public show(newMessage: string): void {
-    this.message = newMessage;
-    this.isVisible = true;
+  public pushNotification(notification: Notification): void {
+    console.log('Pushed notification: \n', notification);
+    this.notifications.push(notification);
   }
 
-  public hide(): void {
-    this.isVisible = false;
-    this.message = '';
+  // PREVENT INTERACTION WITH THE BACK LAYER
+  public onOverlayDummyTouch(): void {
+    console.log('Overlay Dummy Touch');
   }
 }
+
