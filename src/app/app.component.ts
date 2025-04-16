@@ -1,4 +1,4 @@
-import { Component, NO_ERRORS_SCHEMA, ViewContainerRef, ViewChild } from '@angular/core';
+import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptCommonModule, PageRouterOutlet } from '@nativescript/angular';
 
 @Component({
@@ -8,7 +8,5 @@ import { NativeScriptCommonModule, PageRouterOutlet } from '@nativescript/angula
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppComponent {
-  @ViewChild('notificationPopup', { read: ViewContainerRef }) notificationPopupRef: ViewContainerRef;
-
   constructor() { }
 }
